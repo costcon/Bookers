@@ -14,21 +14,27 @@
     <tbody>
       <div class="book-box">
         <% @books.each do |book| %>
-          <section class="book-text">
-            <p class="book-text-heading">
-              <%= link_to book.title, book_path(book) %>
-            </p>
-            <p class="book-date">
-              <%= link_to book.body, book_path(book) %>
-            </p>
-          </section>
+          <%= book.title %>
+          <%= book.body %>
+          <%= link_to "show", show_books_path(@book) %>
+          <%= link_to "edit", edit_books_path(@book) %>
+          <%= link_to "destroy", books_path(@book), method: :delete %>
         <% end %>
       </div>
     </tbody>
     </table>
     <h2>New book</h2>
-      <%= link_to "show", show_book_path(@book) %>
-      <%= link_to "edit", edit_book_path(@book) %>
-      <%= link_to "destroy", book_path(@book), method: :delete %>
+    <%= form_with model:@book, local:true do |f| %>
+
+      <h4>Title</h4>
+      <%= f.text_field :title %>
+
+      <h4>body</h4>
+      <%= f.text_field :body %>
+
+      <%= f.submit 'Create Book' %>
+
+    <% end %>
+
   </body>
 </html>
