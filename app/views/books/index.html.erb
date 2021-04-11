@@ -12,13 +12,14 @@
         </tr>
       </thead>
     <tbody>
+      
       <div class="book-box">
         <% @books.each do |book| %>
           <%= book.title %>
           <%= book.body %>
-          <%= link_to "show", show_books_path(@book) %>
-          <%= link_to "edit", edit_books_path(@book) %>
-          <%= link_to "destroy", books_path(@book), method: :delete %>
+          <%= link_to "show", show_book_path(@book.id) %>
+          <%= link_to "edit", edit_book_path(@book.id) %>
+          <%= link_to "destroy", books_path(@book.id), method: :delete %>
         <% end %>
       </div>
     </tbody>
