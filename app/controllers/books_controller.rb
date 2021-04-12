@@ -27,7 +27,7 @@ class BooksController < ApplicationController
       flash[:success] = "Book was successfully created."
       redirect_to book_path(@newbook.id)
     else
-      flash[:alert] = "Error!! Book was not created."
+      flash[:alert] = "error!! can't be blank."
       redirect_to books_path
     end
   end
@@ -39,7 +39,7 @@ class BooksController < ApplicationController
       flash[:success] = "Book was successfully updated."
       redirect_to book_path(@book.id)
     else
-      flash[:alert] = "Error!! Book was not updated."
+      flash[:alert] = "error!! can't be blank."
       redirect_to book_path(@book.id)
     end
   end
