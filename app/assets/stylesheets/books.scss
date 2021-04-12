@@ -49,3 +49,41 @@ strong {
 a {
   color: #000;
 }
+
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  boreder-spacing:2px;
+  border-color:grey;
+  width: 100%;
+}
+
+
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+}
+
+th {
+  display: table-cell;
+  font-weight: bold;
+  text-align: -internal-center;
+  padding-bottom: 5px;
+}
+
+tbody {
+  display: table-row-group;
+}
+
+.book-box {
+  display: table-row;
+}
