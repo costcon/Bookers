@@ -50,6 +50,20 @@ a {
   color: #000;
 }
 
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.index-title {
+  margin-top: 33px;
+  margin-bottom: 33px;
+}
+
+
 
 table {
   display: table;
@@ -58,32 +72,14 @@ table {
   text-indent: initial;
   boreder-spacing:2px;
   border-color:grey;
-  width: 100%;
-}
-
-
-thead {
-  display: table-header-group;
-  vertical-align: middle;
-  border-color: inherit;
-}
-
-tr {
-  display: table-row;
-  vertical-align: inherit;
+  width: 705px;
+  padding-bottom: 7px;
 }
 
 th {
-  display: table-cell;
-  font-weight: bold;
-  text-align: -internal-center;
-  padding-bottom: 5px;
+  padding-bottom: 7px;
 }
 
-tbody {
-  display: table-row-group;
-}
-
-.book-box {
-  display: table-row;
+td {
+  padding-bottom: 7px;
 }

@@ -1,7 +1,10 @@
-<h2>Title: </h2>
-<p><%=@book.title %></p>
-<h2>Body: </h2>
-<p><%=@book.body %></p>
-<%= link_to "edit", edit_book_path(@book.id) %>
-<%= link_to "back", book_path(@book.id) %>
+<%= flash[:success] %>
+<%= flash[:alert] %>
+
+<p><strong>Title: </strong> <%=@book.title %></p>
+<p><strong>Body: </strong> <%=@book.body %></p><br>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+|
+<%= link_to "Back", books_path %>
 
