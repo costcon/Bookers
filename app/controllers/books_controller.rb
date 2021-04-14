@@ -1,14 +1,14 @@
 class BooksController < ApplicationController
 
   def new
-    @book = Book.new
+    @books = Book.all
   end
 
   def top
   end
 
   def index
-    @book = Book.all
+    @books = Book.all
     @newbook = Book.new
   end
 
@@ -27,8 +27,9 @@ class BooksController < ApplicationController
       flash[:success] = "Book was successfully created."
       redirect_to book_path(@newbook.id)
     else
-      flash[:alert] = "error!! can't be blank."
-      redirect_to books_path
+      @books = Book.all
+      render :index
+
     end
   end
 
@@ -39,8 +40,7 @@ class BooksController < ApplicationController
       flash[:success] = "Book was successfully updated."
       redirect_to book_path(@book.id)
     else
-      flash[:alert] = "error!! can't be blank."
-      redirect_to book_path(@book.id)
+      render :edit
     end
   end
 
